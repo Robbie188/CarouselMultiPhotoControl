@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:ControlBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CarouselKBSample.Controls;assembly=CrouselKBSample"
+             x:Class="CarouselKBSample.Controls.MultiPhotoControl"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms">
+    <Grid MinimumWidthRequest="250" WidthRequest="300">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <syncfusion:SfCarousel x:Name="carousel" Grid.ColumnSpan="3" ViewMode="Default" HeightRequest="200" ItemWidth="200" ItemHeight="150" />
+        <Label Grid.Row="1" Grid.ColumnSpan="3" x:Name="SummaryLabel"></Label>
+        <Button Grid.Row="2" Grid.Column="0" Text="Previous" Clicked="PreviousClicked"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Text="Take" Clicked="TakeNewClicked"></Button>
+        <Button Grid.Row="2" Grid.Column="2" Text="Next" Clicked="NextClicked" ></Button>
+    </Grid>
+</controls:ControlBase>
